@@ -23373,7 +23373,7 @@ angular.module('mm.addons.badges', [])
     $mmContentLinksDelegateProvider.registerLinkHandler('mmaBadges:myBadges', '$mmaBadgesHandlers.myBadgesLinksHandler');
     $mmContentLinksDelegateProvider.registerLinkHandler('mmaBadges:badge', '$mmaBadgesHandlers.badgeLinksHandler');
 }]);
-
+/*
 angular.module('mm.addons.calendar', [])
 .constant('mmaCalendarDaysInterval', 30)
 .constant('mmaCalendarDefaultNotifTime', 60)
@@ -23433,7 +23433,7 @@ angular.module('mm.addons.calendar', [])
         $mmaCalendar.scheduleAllSitesEventsNotifications();
     });
 }]);
-
+*/
 angular.module('mm.addons.competency', [])
 .constant('mmaCompetencyPriority', 900)
 .constant('mmaCourseCompetenciesPriority', 700)
@@ -23557,7 +23557,7 @@ angular.module('mm.addons.coursecompletion', [])
     $mmCoursesDelegateProvider.registerNavHandler('mmaCourseCompletion',
             '$mmaCourseCompletionHandlers.coursesNav', mmaCourseCompletionPriority);
 }]);
-
+/*
 angular.module('mm.addons.files', ['mm.core'])
 .constant('mmaFilesMyComponent', 'mmaFilesMy')
 .constant('mmaFilesSiteComponent', 'mmaFilesSite')
@@ -23601,7 +23601,7 @@ angular.module('mm.addons.files', ['mm.core'])
         });
     $mmSideMenuDelegateProvider.registerNavHandler('mmaFiles', '$mmaFilesHandlers.sideMenuNav', mmaFilesPriority);
 }]);
-
+*/
 angular.module('mm.addons.frontpage', [])
 .constant('mmaFrontpagePriority', 1000)
 .config(["$stateProvider", "$mmCoursesDelegateProvider", "mmCoreCoursePriority", function($stateProvider, $mmCoursesDelegateProvider, mmCoreCoursePriority) {
@@ -23648,7 +23648,7 @@ angular.module('mm.addons.grades', [])
 }]);
 
 angular.module('mm.addons.messageoutput', []);
-
+/*
 angular.module('mm.addons.messages', ['mm.core'])
 .constant('mmaMessagesComponent', 'mmaMessages')
 .constant('mmaMessagesLimitMessages', 50)
@@ -23746,7 +23746,7 @@ angular.module('mm.addons.messages', ['mm.core'])
         });
     }
 }]);
-
+*/
 angular.module('mm.addons.myoverview', [])
 .constant('mmaMyOverviewSideMenuPriority', 1100)
 .config(["$stateProvider", function($stateProvider) {
@@ -23805,7 +23805,7 @@ angular.module('mm.addons.notes', [])
 .run(["$mmCronDelegate", function($mmCronDelegate) {
     $mmCronDelegate.register('mmaNotes', '$mmaNotesHandlers.syncHandler');
 }]);
-
+/*
 angular.module('mm.addons.notifications', [])
 .constant('mmaNotificationsListLimit', 20) 
 .constant('mmaNotificationsPriority', 800)
@@ -23868,13 +23868,13 @@ angular.module('mm.addons.notifications', [])
         });
     }
 }]);
-
+*/
 angular.module('mm.addons.participants', [])
 .constant('mmaParticipantsListLimit', 50) 
 .constant('mmaParticipantsPriority', 600)
 .config(["$stateProvider", "$mmCoursesDelegateProvider", "$mmContentLinksDelegateProvider", "mmaParticipantsPriority", function($stateProvider, $mmCoursesDelegateProvider, $mmContentLinksDelegateProvider, mmaParticipantsPriority) {
     $stateProvider
-        .state('site.participants', {
+        .state('site.participants', {
             url: '/participants',
             views: {
                 'site': {
@@ -23957,7 +23957,7 @@ angular.module('mm.addons.remotestyles', [])
         }
     });
 }]);
-
+/*
 angular.module('mm.addons.messageoutput_airnotifier', [])
 .config(["$stateProvider", function($stateProvider) {
     $stateProvider
@@ -23981,7 +23981,7 @@ angular.module('mm.addons.messageoutput_airnotifier', [])
                 '$mmaMessageOutputAirnotifierHandlers.processorPreferences');
     }
 }]);
-
+*/
 angular.module('mm.addons.mod_assign', ['mm.core'])
 .constant('mmaModAssignComponent', 'mmaModAssign')
 .constant('mmaModAssignSubmissionComponent', 'mmaModAssignSubmission')
@@ -27458,7 +27458,7 @@ angular.module('mm.addons.calendar')
         };
     }
 }]);
-
+/*
 angular.module('mm.addons.calendar')
 .controller('mmaCalendarListCtrl', ["$scope", "$stateParams", "$log", "$state", "$mmaCalendar", "$mmUtil", "$timeout", "$mmEvents", "mmaCalendarDaysInterval", "$ionicScrollDelegate", "$mmLocalNotifications", "$mmCourses", "mmaCalendarDefaultNotifTimeChangedEvent", "$ionicPopover", "$q", "$translate", "$ionicPlatform", function($scope, $stateParams, $log, $state, $mmaCalendar, $mmUtil, $timeout, $mmEvents,
         mmaCalendarDaysInterval, $ionicScrollDelegate, $mmLocalNotifications, $mmCourses, mmaCalendarDefaultNotifTimeChangedEvent,
@@ -27866,7 +27866,7 @@ angular.module('mm.addons.calendar')
     return self;
 }]);
 
-/*angular.module('mm.addons.calendar')
+angular.module('mm.addons.calendar')
 .factory('$mmaCalendarHandlers', ["$log", "$mmaCalendar", function($log, $mmaCalendar) {
     $log = $log.getInstance('$mmaCalendarHandlers');
     var self = {};
@@ -27886,8 +27886,8 @@ angular.module('mm.addons.calendar')
         return self;
     };
     return self;
-}]);*/
-
+}]);
+*/
 angular.module('mm.addons.competency')
 .controller('mmaCompetenciesListCtrl', ["$scope", "$mmaCompetency", "$mmUtil", "$stateParams", "$state", "$ionicPlatform", "$q", "$translate", "$mmaCompetencyHelper", function($scope, $mmaCompetency, $mmUtil, $stateParams, $state, $ionicPlatform, $q,
     $translate, $mmaCompetencyHelper) {
@@ -29176,7 +29176,7 @@ angular.module('mm.addons.files')
     };
     return self;
 }]);
-
+/*
 angular.module('mm.addons.files')
 .factory('$mmaFilesHandlers', ["$log", "$mmaFiles", function($log, $mmaFiles) {
     $log = $log.getInstance('$mmaFilesHandlers');
@@ -29243,7 +29243,7 @@ angular.module('mm.addons.files')
     };
     return self;
 }]);
-
+*/
 angular.module('mm.addons.frontpage')
 .directive('mmaFrontpageItem', ["$compile", function($compile) {
     return {
@@ -30588,7 +30588,7 @@ angular.module('mm.addons.messages')
         }
     });
 }]);
-
+/*
 angular.module('mm.addons.messages')
 .filter('mmaMessagesFormat', ["$mmText", function($mmText) {
   return function(text) {
@@ -31820,7 +31820,7 @@ angular.module('mm.addons.messages')
     };
     return self;
 }]);
-
+*/
 angular.module('mm.addons.myoverview')
 .controller('mmaMyOverviewCtrl', ["$scope", "$mmaMyOverview", "$mmUtil", "$q", "$mmCourses", "$mmCoursesDelegate", function($scope, $mmaMyOverview, $mmUtil, $q, $mmCourses, $mmCoursesDelegate) {
     $scope.tabShown = 'courses';
@@ -32869,7 +32869,7 @@ angular.module('mm.addons.notes')
     };
     return self;
 }]);
-
+/*
 angular.module('mm.addons.notifications')
 .controller('mmaNotificationsListCtrl', ["$scope", "$mmUtil", "$mmaNotifications", "mmaNotificationsListLimit", "$mmAddonManager", "mmUserProfileState", "$q", "$mmEvents", "$mmSite", "mmaNotificationsReadChangedEvent", "mmaNotificationsReadCronEvent", "$state", function($scope, $mmUtil, $mmaNotifications, mmaNotificationsListLimit, $mmAddonManager,
             mmUserProfileState, $q, $mmEvents, $mmSite, mmaNotificationsReadChangedEvent, mmaNotificationsReadCronEvent, $state) {
@@ -32983,7 +32983,7 @@ angular.module('mm.addons.notifications')
         }
     });
 }]);
-
+*/
 angular.module('mm.addons.notifications')
 .controller('mmaNotificationsPreferencesCtrl', ["$scope", "$mmaNotifications", "$mmUtil", "$ionicPlatform", "$mmUser", "$mmConfig", "$mmaMessageOutputDelegate", "$q", "$timeout", "$mmSettingsHelper", "mmCoreSettingsNotificationSound", "$mmLocalNotifications", "$mmEvents", "mmCoreEventNotificationSoundChanged", "$mmApp", function($scope, $mmaNotifications, $mmUtil, $ionicPlatform, $mmUser, $mmConfig,
             $mmaMessageOutputDelegate, $q, $timeout, $mmSettingsHelper, mmCoreSettingsNotificationSound, $mmLocalNotifications,
@@ -33137,7 +33137,7 @@ angular.module('mm.addons.notifications')
     return text;
   };
 }]);
-
+/*
 angular.module('mm.addons.notifications')
 .factory('$mmaNotificationsHandlers', ["$log", "$mmaNotifications", "$mmEvents", "$mmSitesManager", "$mmUtil", "$mmSite", "mmaNotificationsReadChangedEvent", "mmaNotificationsReadCronEvent", "$mmAddonManager", "$mmApp", "$mmLocalNotifications", "$mmEmulatorHelper", "$mmText", "mmaNotificationsPushSimulationComponent", function($log, $mmaNotifications, $mmEvents, $mmSitesManager, $mmUtil, $mmSite,
         mmaNotificationsReadChangedEvent, mmaNotificationsReadCronEvent, $mmAddonManager, $mmApp, $mmLocalNotifications,
@@ -33252,7 +33252,7 @@ angular.module('mm.addons.notifications')
     };
     return self;
 }]);
-
+*/
 angular.module('mm.addons.notifications')
 .factory('$mmaNotifications', ["$q", "$log", "$mmSite", "$mmSitesManager", "$mmUser", "$mmUtil", "$mmApp", "mmaNotificationsListLimit", "mmaNotificationsPushSimulationComponent", "$mmEmulatorHelper", function($q, $log, $mmSite, $mmSitesManager, $mmUser, $mmUtil, $mmApp, mmaNotificationsListLimit,
             mmaNotificationsPushSimulationComponent, $mmEmulatorHelper) {
@@ -36832,7 +36832,7 @@ angular.module('mm.addons.messageoutput_airnotifier')
     };
     return self;
 }]);
-
+/*
 angular.module('mm.addons.messageoutput_airnotifier')
 .factory('$mmaMessageOutputAirnotifierHandlers', ["$mmaMessageOutputAirnotifier", "$state", function($mmaMessageOutputAirnotifier, $state) {
     var self = {};
@@ -36851,7 +36851,7 @@ angular.module('mm.addons.messageoutput_airnotifier')
     };
     return self;
 }]);
-
+*/
 angular.module('mm.addons.mod_assign')
 .controller('mmaModAssignDescriptionCtrl', ["$scope", "$stateParams", "mmaModAssignComponent", function($scope, $stateParams, mmaModAssignComponent) {
     $scope.description = $stateParams.description;
